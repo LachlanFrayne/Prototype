@@ -18,7 +18,27 @@ public class PickUpObject : MonoBehaviour {
     //Update is called once per frame
     void Update()
     {
-       
+		RaycastHit hit;
+		// Does the ray intersect any objects excluding the player layer
+		if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
+		{
+			// If mouse down and if hitting a cube
+			// move cube to guide, do rigidbody stuff, set a bool to carrying
+			if (Input.GetMouseButtonDown(0))
+			{ 
+				if (hit.transform.gameObject == item)
+				{
+					item.transform.SetParent (guide);
+					item.transform.position = guide.position;
+				}
+
+					
+			}
+
+			// if mouse down again, and is carrying, drop cube - reset rigidbodies
+
+			Debug.Log (hit.transform.name);
+		}
     }
     
     void OnMouseDown()
