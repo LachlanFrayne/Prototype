@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DoorKey1
+  - PadOne
+  - PadTwo
   layers:
   - Default
   - TransparentFX

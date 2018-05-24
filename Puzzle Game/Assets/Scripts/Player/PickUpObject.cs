@@ -36,7 +36,10 @@ public class PickUpObject : MonoBehaviour {
 			}
 
 			// if mouse down again, and is carrying, drop cube - reset rigidbodies
-
+			if (Input.GetMouseButtonDown (0)) = false
+			{
+				if 
+			}
 			Debug.Log (hit.transform.name);
 		}
     }
